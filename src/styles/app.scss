@@ -1,0 +1,31 @@
+.App {
+  padding: 20px;
+  &__navbar {
+    display: flex;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    justify-content: center;
+    @media (max-width: 700px) {
+      justify-content: left;
+    }
+    &__option {
+      color: rgb(36, 34, 34);
+      text-decoration: none;
+      margin: 20px 0;
+
+      &:active,
+      &:hover {
+        font-weight: 600;
+        color: #000;
+      }
+    }
+    .active {
+      font-weight: 600;
+      color: #000;
+      color: #000;
+    }
+  }
+}
