@@ -1,0 +1,23 @@
+.cardContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  &__nombre {
+    font-size: 15px;
+  }
+  &__cargo {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  &__sueldo {
+    font-size: 12px;
+
+    span {
+      color: #000;
+      font-weight: 700;
+    }
+  }
+  &__ganancia {
+    color: rgb(0, 90, 0);
+  }
+}

@@ -1,0 +1,124 @@
+.input-container {
+  height: 75%;
+  position: relative;
+  border: 1px dashed #d3d3d3;
+  padding: 16px;
+  text-align: center;
+
+  &.dragging {
+    border-color: #0077ff;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-top: 16px;
+  }
+  .file-input {
+    width: 100%;
+    border: none;
+    opacity: 0;
+    background-color: transparent;
+    font-size: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: absolute;
+  }
+}
+
+.Upload {
+  @media (min-width: 900px) {
+    display: flex;
+    justify-content: right;
+    height: 100%;
+  }
+  &__left {
+    @media (min-width: 900px) {
+      position: fixed;
+      /* top: 0; */
+      left: 6px;
+      height: 100vh;
+      background: #fff;
+    }
+    &__sendBtn {
+      width: 100%;
+      background-color: #0077ff;
+      border: none;
+      height: 50px;
+      font-size: 20px;
+      margin: 20px auto;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      font-weight: 600;
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -o-transition: 0.5s;
+      &:hover {
+        background-color: #61abff;
+      }
+    }
+  }
+
+  &__excel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+
+    @media (max-width: 900px) {
+      top: 10%;
+    }
+    &--out {
+      overflow: scroll;
+      table {
+        border-collapse: collapse;
+        width: 77%;
+
+        @media (min-width: 900px) {
+          margin-left: 16rem;
+        }
+        thead {
+          background-color: #1a59c8;
+          color: #fff;
+          font-weight: bold;
+
+          th {
+            border: 1px solid #d3d3d3;
+            padding: 8px;
+            text-align: left;
+          }
+        }
+
+        tbody {
+          tr {
+            &:nth-child(even) {
+              background-color: #f9f9f9;
+            }
+
+            td {
+              border: 1px solid #d3d3d3;
+              padding: 8px;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
