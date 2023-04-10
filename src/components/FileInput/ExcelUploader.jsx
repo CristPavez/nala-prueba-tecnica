@@ -19,7 +19,6 @@ function ExcelUploader() {
       const worksheetName = workbook.SheetNames[0];
       const worksheet = workbook.Sheets[worksheetName];
       const data = XLSX.utils.sheet_to_json(worksheet);
-      console.log(data);
       SetData(data);
       setFile(file);
     };
@@ -38,9 +37,7 @@ function ExcelUploader() {
         navigate("/");
         return response;
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   const [dragging, setDragging] = useState(false);
@@ -68,7 +65,7 @@ function ExcelUploader() {
         const worksheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[worksheetName];
         const data = XLSX.utils.sheet_to_json(worksheet);
-        console.log(data);
+
         SetData(data);
         setFile(file);
       };

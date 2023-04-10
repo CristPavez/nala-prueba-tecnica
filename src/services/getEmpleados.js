@@ -2,10 +2,9 @@ import axios from "axios";
 
 export const getEmpleados = async () => {
   try {
-    const res = await axios.get("http://localhost:4000/api/empleados");
-    console.log(res.data);
+    const res = await axios.get(
+      process.env.REACT_APP_API_URL + "/api/empleados"
+    );
     return res.data;
-  } catch (err) {
-    console.log(err);
-  }
+  } catch (err) {}
 };

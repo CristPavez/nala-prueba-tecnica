@@ -11,8 +11,7 @@ const HomePage = () => {
     const fetchData = async () => {
       try {
         const data = await getEmpleados();
-        console.log(data);
-        
+
         setEmpleados(data)
       } catch (error) {
       }
